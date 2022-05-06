@@ -1,11 +1,11 @@
 
-# Near Dice
+# Super Loto Number Generator
 
-A small game where a user can create a room by putting Near tokens into it. A second user can then join the game and guess the dice result (1-6), if the guess is correct the total amount of tokens is transferred to the player, otherwise it is transferred to the creator.
+A small gadget that creates 6 numbers (1-60) for every demand of the user. The user are welcomed for donation in Near token.
 
 
 
-[![Near Dice Demo](https://user-images.githubusercontent.com/62159014/151663684-1cd01b3e-c93b-4cfb-9ffa-531d488b78ed.gif)](https://www.loom.com/share/c59147126c5a4b9aa8956bae77739c2f)
+[![Super Loto Demo](loom gif)](loomlink)
 
 
 
