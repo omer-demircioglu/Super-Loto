@@ -1,8 +1,7 @@
 
 # Super Loto Number Generator
 
-A small gadget that creates 6 number (1-60) row for super loto lottary game for every demand of the user. The user are welcomed for donation in Near token.
-
+A small gadget that creates 6 number (1-60) rows for a super lotto lottery game for every user's demand. The users are welcome to donate in Near token.
 
 [![Super Loto Demo](loom gif)](loomlink)
 
