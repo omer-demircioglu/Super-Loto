@@ -1,12 +1,10 @@
 
 # Super Loto Number Generator
 
-A small gadget that creates 6 numbers (1-60) for every demand of the user. The user are welcomed for donation in Near token.
-
+A small gadget that creates 6 number (1-60) row for super loto lottary game for every demand of the user. The user are welcomed for donation in Near token.
 
 
 [![Super Loto Demo](loom gif)](loomlink)
-
 
 
 # Cloning the project
@@ -51,65 +49,14 @@ If you want to run the contract in the terminal you can either:
 **Example call:**
 `near call $CONTRACT initSession --amount 5 --account_id $NEAR_ACCOUNT`
 
----------------------------------------------------------------------------
-## playGame 
+## generateRows 
 
- - Takes ***_gameId*** and ***_guess*** as parameters
- - Guess must be between 1-6
- - The game's player and the person calling the function must be the same
- - A game has to be in the **JOINED** state in order to be played
- - returns the dice number as well as the winner's name
+ - Takes ***_sessionId*** and ***_rowNumber*** as parameters
+ - Row number must be between 1-10
+ - returns the rows that each consist of 6 randomly generated numbers between 1-60 (inclusive)
  
 **Example call:**
-`near call $CONTRACT playGame '{"_gameId":'$GAMEID' , "_guess":3 }' --accountId $NEAR_ACCOUNT`
-
-## deleteGame 
-
- - Takes ***_gameId*** as  a parameters
- - The person calling this function must be the owner 
- - The game must be in the **FINISHED** in order to be deleted
- - returns a string confirming game deletion
-
- **Example call:**
-`near call $CONTRACT deleteGame '{"_gameId":'$GAMEID' }' --accountId $NEAR_ACCOUNT`
- 
-## viewGame 
- - Takes ***_gameId*** as  a parameters
- - returns the game's details
- 
- **Example call:**
-`near call $CONTRACT viewGame '{"_gameId":'$GAMEID' }' --accountId $NEAR_ACCOUNT`
- 
-## viewAllGames 
- - Does not take anything as a parameter
- - returns an array of all games
-
-**Example call:** 
-`near view $CONTRACT viewAllGames --accountId $NEAR_ACCOUNT`
-
-## reactivateGame 
- - Takes ***_gameId*** as  a parameters
- - The person calling this function must be the owner 
- - The game must be in the **FINISHED** in order to be reactivated
- - The creator must attach some tokens into the function
- - Returns a string confirming game reactivation
-
-**Example call:**
-
-`near call $CONTRACT reactivateGame '{"_gameId": '$GAMEID'}' --amount 3 --accountId $NEAR_ACCOUNT`
+`near call $CONTRACT generateRows '{"_sessionId":'$SESSIONID' , "_rowNumber":3 }' --accountId $NEAR_ACCOUNT`
 
 
-# Front-end
-The front-end for this project was build using NextJS as a framework.
-
-In order to run the front-end locally you have to run the command:
-
-    yarn dev
-
- 
-
-## Linking front-end to the contract
-The front-end is linked to the 	***dice.aimensh.testnet*** contract by default ,  if you want to connect your own contract with the front-end, you need to replace the **CONTRACT_ID** variable in the ***near/near-setup.js*** file with your own contract id.
-
-    export  const  CONTRACT_ID = "CONTRACT_IDs";
 
